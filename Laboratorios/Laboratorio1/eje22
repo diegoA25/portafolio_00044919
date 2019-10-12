@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+    
+    int matrix[5][5];
+    
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[0][0];
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[0][1]; 
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[1][0]; 
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[1][1]; 
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[1][2];
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[2][1];
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[2][2];
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[2][3];
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[3][2];
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[3][3];
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[3][4];
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[4][3];
+    cout<<"Digite un valor: "<<endl;
+    cin>>matrix[4][4];
+    
+    matrix[0][2]=0;
+    matrix[0][3]=0;
+    matrix[0][4]=0;
+    matrix[1][3]=0;
+    matrix[1][4]=0;
+    matrix[2][0]=0;
+    matrix[2][4]=0;
+    matrix[3][0]=0;
+    matrix[3][1]=0;
+    matrix[4][0]=0;
+    matrix[4][1]=0;
+    matrix[4][2]=0;
+    
+    for(int i=0; i<5; i++){
+        for(int j=0; j<5; j++){
+            if(j==4){
+                cout<<matrix[i][j];
+            }
+            else {
+                cout<<matrix[i][j]<<" ";
+            }
+        }
+    }
+}
