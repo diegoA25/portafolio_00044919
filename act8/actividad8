@@ -1,0 +1,84 @@
+#include <iostream>
+using namespace std;
+
+struct Tpila{
+    float elementos[10];
+    int top;
+};
+
+
+typedef struct Tpila Pila;
+
+void initialize(Pila *s){
+	s->top = -1;
+}
+
+bool empty(Pila *s){
+	return s->top < 0;
+}
+
+void push(Pila *s, float e){
+	if(s->top < 9){
+		(s->top)++;
+		s->elementos[s->top] = e;
+	}
+}
+
+void pop(Pila *s, float *e){
+	if(s->top >= 0){
+		*e = s->elementos[s->top];
+		(s->top)--;
+	}
+}
+
+float vacia(Pila *s){
+    float a=-1; 
+    while(!empty(s)){
+        pop(s, &a);
+                     }
+    return a;
+}
+
+float intacta(Pila *s){
+    float kk[10];
+    for(int i=0; i<10; i++){
+        if(!empty(s)){
+           pop(s, &kk[i]);
+        }
+    }
+    for(int j=0; j<10; j++){
+        push(s, &kk[j]);
+    }
+    
+    return kk[9];
+    
+}
+
+
+
+int main()
+{
+    float f;    
+    Pila unaPila;
+    initialize(&unaPila);
+	
+    push(&unaPila, 3.4);
+    push(&unaPila, 6.9);
+	
+    /*f=vacia(&unaPila);
+    if(f==-1){
+        cout<<"corre pero f"<<endl;
+    }
+    else {
+        cout<<"El ultimo valor es "<<f<<endl;
+    }
+     * */
+    intacta(&unaPila);
+    f=intacta(&unaPila);
+    if(f==-1){
+        cout<<"corre pero f"<<endl;
+    }
+    else {
+        cout<<"El ultimo valor es "<<f<<endl;
+    }
+}

@@ -1,0 +1,48 @@
+Asumiendo que la pila ya esta creada (s=initialize)
+
+Entonces:
+//El primer literal
+
+if (!empty(s)){
+	pop(s)
+	if (empty(s)){
+		Error solo habia un valor
+	}
+	else {
+		kk = pop(s)	
+	}
+}
+else {
+	que estas haciendo no hay nada ahi
+}
+
+//segundo literal 
+
+if (!empty(s)){ verificando que no esta vacia la pila
+	l = pop(s) se saca el primer valor y se almacena en una variable
+	if (empty(s)){ si la pila esta vacia despues de eso entonces se muestra:
+		Solo habia un dato
+	}
+
+	else { sino se saca el segundo valor de la pila se le muestra al ususario y luego se vuelven a agregar a la pila para dejarla intacta 
+		j = pop(s)
+		y se le muestra el dato al usuario
+		push(s, j)
+		push(s, l)
+	}
+}
+
+// tercer literal
+
+if(empty(s)){ verificar si la pila estaba vacia inicialmente
+	No hay nada en la kk de la pila 
+}
+
+else { sino que vaya sacando cada valor hasta obtener el ultimo de la pila y dejando dicha pila vacia
+	while(!empty(s)){
+		l = pop(s)
+	}
+}
+if (empty(s)){ y finalmente se muestra el valor final de la pila 
+	se muestra el valor l
+}

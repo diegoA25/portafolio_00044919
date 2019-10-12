@@ -1,0 +1,24 @@
+#include <iostream>
+#include <queue>
+
+using namespace std;
+
+
+int main (){
+    int n=0;
+    
+    cout<<"Ingrese el tamanio de la cola: "<<endl;
+    cin>>n;
+    
+    int cola[n];
+    
+    for(int i=0; i<n; i++){
+        cout<<"Ingrese un valor para la cola: "<<endl;
+        cin>>cola[i];
+    }
+    
+    cout<<"La cola es: "<<cola[n]<<endl;
+}
+
+//no entiendo como hacer una cola circular
+
