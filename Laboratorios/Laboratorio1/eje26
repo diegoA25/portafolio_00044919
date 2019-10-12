@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+struct complejo{
+    int real;
+    int img;
+};
+
+int conjugada(int a, int b){
+    if(b<0){
+        cout<<"El numero original es: "<<a<<' '<<b<<'j'<<endl;
+        cout<<"La conjugada es: "<<a<<'+'<<-b<<'j'<<endl;
+    }
+    else {
+        cout<<"El numero original es: "<<a<<'+'<<b<<'j'<<endl;
+        cout<<"La conjugada es: "<<a<<' '<<-b<<'j'<<endl;
+    }
+}
+int main (){
+    
+    complejo pedo;
+    cout<<"Digite la parte real: "<<endl<<endl;
+    cin>>pedo.real;
+    cout<<"Digite la parte imaginaria: "<<endl<<endl;
+    cin>>pedo.img;
+    
+    conjugada(pedo.real, pedo.img);
+    
+    
+}
