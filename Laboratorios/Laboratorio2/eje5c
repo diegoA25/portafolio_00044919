@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int destino(int pos3){
+    
+}
+
+int auxiliar(int pos2){
+    
+}
+
+int origen(int pos1){
+    
+}
+
+int main (){
+    int discos;
+    cout<<"Digite el numero de discos de la torre"<<endl;
+    cin>>discos;
+    
+    origen(discos);
+    
+}

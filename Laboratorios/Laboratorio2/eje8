@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int cantidad(int num){
+    
+    if(num%10!=0){
+        return cantidad(num/10)+1;
+    }
+    else {
+        return 0;
+    }
+}
+
+
+
+int main (){
+    int n=0;
+    cout<<"Digite un numero entero: "<<endl;
+    cin>>n;
+    cantidad(n);
+    
+    cout<<"La cantidad de digitos es: "<<cantidad(n)<<endl;
+    return 0;
+}
