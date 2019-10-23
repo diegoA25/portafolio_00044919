@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a[10][20];
+
+    for(int i=0; i<10; i++){
+        for(int j=0; j<20; j++){
+            a[i][j]=100+j+(20*i);
+
+            //a[i][j]=*(((*a))+(i*20+j));
+            //cout<<*(((*a))+(i*20+j))<<endl; otra forma de mostrar todos los valores quitar para comprobar
+
+            //a[i][j]= *(*(a+i)+j);
+            //cout<<*(*(a+i)+j)<<endl; lo mismo que el anterior e igualmente no funciona fuera del for
+
+            //a[i][j]= *(a[i]+j);
+            //cout<<*(a[i]+j)<<endl; lo mismo que el anterior
+
+            //a[i][j]= (*(a+i))[j]; lo mismo que el anterior
+
+        }
+
+    }
+    cout<<a[0][0]<<endl;
+    cout<<a[5][1]<<endl;
+    cout<<a[1][10]<<endl;
+    cout<<a[2][10]<<endl;
+    cout<<a[5][3]<<endl;
+    cout<<a[9][19]<<endl;
+    //parte 2
+    //a[0][0]= *(*(a)); si es valido
+    //cout<<*(*(a))<<endl;
+    //a[i][j]=*(((*a))+(i*20+j)) si es valido esta imprime todos los valores
+	//todos son validos en caso de que sean usados como una manera de presentar todos los valores del arreglo ya dado 
+    return 0;
+}

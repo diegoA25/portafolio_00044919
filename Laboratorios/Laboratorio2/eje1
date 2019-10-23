@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int mcd(int my, int mn){
+    int division=0;
+    division = my%mn;
+    
+    if(division==0){
+        cout<<"El mcd es: "<<my/mn<<endl;
+    }
+    else {
+        int auxmay = mn;
+        int auxmen = division;
+        int nuevadiv;
+        nuevadiv= auxmay%auxmen;
+        if(nuevadiv==0){
+            cout<<"El mcd es: "<<auxmay/auxmen<<endl;
+        }
+    }
+}
+int main() {
+    int mayor, menor;
+    cout<<"Digite dos numeros enteros, primero el mayor y luego el menor:"<<endl;
+    cin>>mayor;
+    cin>>menor;
+    
+    mcd(mayor, menor);
+    
+}
+
+

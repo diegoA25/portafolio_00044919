@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int mediana(int a[j]){		
+	for(int j=0; j<i; j++){
+		
+	}
+	
+};
+int main (){
+	int n;
+	cout<<"Cuantos numeros va a digitar? "<<endl;
+	cin>>n;
+
+	int a[n];
+	for(int i=0;i<n;i++){
+	cout<<"Digite el numero: "<<endl;
+	cin>>a[i];
+	mediana(a[i]);
+
+	}
+
+
+}
+
+
+//esta actividad no fue entregada a tiempo via moddle 
+
