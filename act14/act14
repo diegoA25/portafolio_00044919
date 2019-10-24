@@ -1,0 +1,56 @@
+Para los siguientes arboles, calcule:
+cuales nodos son la raiz, ramas y hojas.
+Nivel de cada nodo.
+Profundidad, peso y orden del arbol.
+un Sub-arbol cualquiera
+determine si es perfecto o completo.
+Recorridos pre-orden, post-orden e in-orden.
+
+Primer Arbol:
+
+El Nodo Raiz es: A
+Los Nodos Ramas son: B, C, D, E
+Los Nodos Hojas son: F, G, H, I
+
+Niveles:
+
+Nivel 0: A
+Nivel 1: B, C
+NIvel 2: D, E, F
+Nivel 3: G, H, I
+
+Profundidad: 3
+Peso: 9
+Orden: 3
+
+NO es Perfecto ni completo.
+Pre-orden: 
+A->B->D->G->C->E->H->I->F
+Post-orden: 
+A->G->D->B->H->I->E->F->C->A
+In-orden:
+A->G->D->B->A->H->E->I->C->F
+
+Segundo Arbol: 
+RAIZ: A
+RAMAS: B, C, D, E, F, G, H
+HOJAS: I, J, K, L
+
+NIVEL 0: A
+NIVEL 1: B
+NIVEL 2: C, D
+NIVEL 3: E, F, G ,H
+NIVEL 4: I, J, K, L
+
+PROFUNDIDAD: 4
+PESO: 12
+ORDEN: 4
+
+NO es perfecto ni completo
+
+Pre-orden: 
+A-B-C-E-I-F-J-D-G-H-K-L
+Post-orden:
+A-I-E-C-F-J-G-K-L-H-D-B-A
+In-orden:
+A-E-I-C-J-F-G-D-K-H-L-A
