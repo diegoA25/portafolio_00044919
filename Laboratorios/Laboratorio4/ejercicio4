@@ -1,0 +1,79 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+void Mostrar(datos *pInicio){
+    if(pInicio==NULL){
+        return;
+    }
+    else{
+        cout<<"Lista: "<<endl;
+        cout<<pInicio->num<<endl;
+        return Mostrar(pInicio->sig);
+    }
+}
+
+void menu(){
+    cout<<"1. Agregar numero"<<endl;
+    cout<<"2. Suma de pares"<<endl;
+    cout<<"3. Suma de impares"<<endl;
+    cout<<"4. Mostrar lista"<<endl;
+    cout<<"5. Salir"<<endl;
+    cout<<"Opcion: ";
+}
+
+void Sumapar(datos *pInicio){
+    if(pInicio==NULL){
+        return;
+    }
+    else{
+
+    }
+}
+
+void Sumaimpar(datos *pInicio){
+    if(pInicio==NULL){
+        return;
+    }
+    
+}
+
+struct datos{
+    int num;
+    struct datos *sig;
+};
+
+int main(){
+    datos *pInicio=NULL;
+    datos *nuevo=NULL;
+    srand(time(NULL));
+    int r;
+    do{
+        menu();
+        cin>>r;
+        if(r==1){
+            nuevo = new datos;
+            nuevo->num=1+rand()%(101-1);
+            nuevo->sig=NULL;
+            if(pInicio==NULL){
+                pInicio=nuevo;
+            }
+            else{
+                nuevo->sig=pInicio;
+                pInicio=nuevo;
+            }
+        }
+        else if(r==2){
+            Sumapar(pInicio);
+        }
+        else if(r==3){
+            Sumaimpar(pInicio);
+        }
+        else if(r==4){
+            Mostrar(pInicio);
+        }
+        else if(r>5){
+            cout<<"Opcion Erronea"<<endl;
+        }
+    }while(r!=5);
+}
