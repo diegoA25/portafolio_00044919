@@ -1,0 +1,91 @@
+#include <iostream>
+#include <stdlib.h>
+#include <string>
+using namespace std;
+
+void Mostrar(datos *pInicio){
+    if(pInicio==NULL){
+        return;
+    }
+    else{
+        cout<<"Persona: "<<pInicio->nombre<<endl;
+        cout<<"Edad: "<<pInicio->edad<<endl;
+        cout<<"Profesion: "<<pInicio->profesion<<endl;
+        return Mostrar(pInicio->sig);
+    }
+}
+
+void Eliminar(datos *pInicio){
+    if(pInicio==NULL){
+        return;
+    }
+    else{
+        datos *nuevo;
+        string persona;
+        cout<<"Digite el nombre de la persona a eliminar: ";
+        cin.ignore();
+        getline(persona, cin);
+        do{
+            reintentar:
+            if(persona==nuevo->nombre){
+            delete(nuevo->nombre);
+            delete(nuevo->edad);
+            delete(nuevo->profesion);
+            }
+            pInicio->sig;
+            goto reintentar;
+        }while(pInicio!=persona);
+    }
+}
+
+void menu(){
+    cout<<"1. Agregar persona"<<endl;
+    cout<<"2. Eliminar persona"<<endl;
+    cout<<"3. Actualizar datos de una persona"<<endl;
+    cout<<"4. Mostrar todas las personas"<<endl;
+    cout<<"5. Salir"<<endl;
+    cout<<"Opcion: ";
+}
+
+struct datos{
+    string nombre;
+    int edad;
+    string profesion;
+    struct datos *sig;
+};
+
+int main(){
+    datos *pInicio=NULL;
+    datos *nuevo=NULL;
+    int r;
+    do{
+        menu();
+        cin>>r;
+        if(r==1){
+            nuevo = new datos;
+            cout<<"Nombre: "<<nuevo->nombre<<endl;
+            cout<<"Edad: "<<nuevo->edad<<endl;
+            cout<<"Profesion: "<<nuevo->profesion<<endl;
+            nuevo->sig=NULL;
+            if(pInicio==NULL){
+                pInicio=nuevo;
+            }
+            else{
+                nuevo->sig=pInicio;
+                pInicio=nuevo;
+            }
+        }
+        else if(r==2){
+            Eliminar(pInicio);
+        }
+        else if(r==3){
+            
+        }
+        else if(r==4){
+            Mostrar(pInicio);
+        }
+        else if(r>5){
+            cout<<"Opcion Erronea"<<endl;
+        }
+    }while(r!=5);
+}
