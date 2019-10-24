@@ -27,7 +27,11 @@ void Sumapar(datos *pInicio){
         return;
     }
     else{
-
+	int cont;
+	if((pInicio->num)%2==0){
+		cont = cont + pInicio->num;
+		return Sumarpar(pInicio->sig);
+	}
     }
 }
 
@@ -35,7 +39,13 @@ void Sumaimpar(datos *pInicio){
     if(pInicio==NULL){
         return;
     }
-    
+    else{
+	int cont;
+	if(pInicio->num%2!=0){
+	   cont = cont + pInicio->num;
+	   return Sumarimpar(pInicio->sig);
+	}
+    }    
 }
 
 struct datos{
